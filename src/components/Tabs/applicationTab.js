@@ -9,6 +9,8 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { Home, Assignment } from "@material-ui/icons";
 import PersonPinIcon from "@material-ui/icons/PersonPin";
+import { auto } from "async";
+import ApplicationHome from "../../pages/Home/applicationHome";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,7 +48,7 @@ function a11yProps(index) {
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: 500,
+    width: auto,
   },
 }));
 
@@ -65,7 +67,7 @@ export default function ApplicationTab() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: "#2E3B55" }}>
+      <AppBar position="static" style={{ background: "#3b5998" }}>
         {/* Here place our logo */}
         <Tabs
           value={value}
@@ -84,11 +86,9 @@ export default function ApplicationTab() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          Home
+          <ApplicationHome />
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          Exam Room
-        </TabPanel>
+        <TabPanel value={value} index={1} dir={theme.direction}></TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           Account
         </TabPanel>
