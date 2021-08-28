@@ -3,9 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import InputLabel from "@material-ui/core/InputLabel";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
-import { selectedValue } from "../../pages/Home/utils";
-import { PropTypes } from "@material-ui/core";
-import { render } from "@testing-library/react";
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -17,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SelectDropdown = () => {
+const SearchExamPapers = () => {
   const Options = ["Yes", "No"];
   const classes = useStyles();
 
@@ -50,4 +47,4 @@ const SelectDropdown = () => {
   );
 };
 
-export default SelectDropdown;
+export default SearchExamPapers;

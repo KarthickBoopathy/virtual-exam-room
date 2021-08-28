@@ -1,7 +1,7 @@
 import { Component } from "react";
 import SimpleAccordion from "../../components/Accordion/accordion";
 import PercentagePaper from "../../components/PercentagePaper/percentagePaper";
-import SelectDropdown from "../../components/SelectDropdown/searchExamPapers";
+import SearchExamPapers from "./searchExamPapers";
 
 export default class ApplicationHome extends Component {
   some = () => {
@@ -12,7 +12,7 @@ export default class ApplicationHome extends Component {
     return (
       <>
         <PercentagePaper user="Karthick Boopathy" percentage={70} />
-        <SelectDropdown />
+        <SearchExamPapers />
         <SimpleAccordion children={this.some()} title="Branch" />
       </>
     );
